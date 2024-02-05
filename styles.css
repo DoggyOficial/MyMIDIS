@@ -98,7 +98,7 @@ li {
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 98,5%; /* Largura ajustada */
   box-sizing: border-box; /* Garante que a largura inclua bordas e preenchimento */
 }
