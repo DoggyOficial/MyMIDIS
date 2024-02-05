@@ -73,9 +73,7 @@
   </style>
 </head>
 <body>
-  <input type="file" id="fileInput">
-  <button onclick="uploadMIDI()">Upload</button>
-
+  
   <h1>
     <img src="https://raw.githubusercontent.com/DoggyOficial/midis/main/Icon.png" alt="Icon" width="24" height="24">
     MyMIDIs!
@@ -148,21 +146,6 @@
         }
       };
     });
-  </script>
-
-  <script>
-    async function uploadMIDI() {
-      const fileInput = document.getElementById('fileInput');
-      const file = fileInput.files[0];
-
-      const response = await fetch('/.netlify/functions/upload', {
-        method: 'POST',
-        body: file,
-      });
-
-      const result = await response.json();
-      console.log(result);
-    }
   </script>
 
 </body>
