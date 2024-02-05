@@ -51,6 +51,10 @@
     .copy-button:active {
       background-color: #1565C0; /* Azul para Copiar */
     }
+    .button-container {
+      display: flex;
+      gap: 10px; /* Espaçamento horizontal entre os botões */
+    }
   </style>
 </head>
 <body>
@@ -75,7 +79,7 @@
           const listItem = document.createElement('li');
           listItem.innerHTML = `
             <span>${file.name}</span>
-            <div>
+            <div class="button-container">
               <button class="download-button" onclick="downloadMidi('${file.name}')">Baixar</button>
               <button class="copy-button" onclick="copyMidiUrl('${file.name}', this)">Copiar</button>
             </div>
