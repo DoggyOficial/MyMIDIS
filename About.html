@@ -4,19 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Página</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+  <link rel="icon" href="https://raw.githubusercontent.com/DoggyOficial/midis/main/Icon.png" type="image/png">
+
+  <!-- Referência ao arquivo CSS externo -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>
+      <img src="https://raw.githubusercontent.com/DoggyOficial/midis/main/Icon.png" alt="Icon" width="24" height="24">
+      MyMIDIs!
+    </h1>
+    <nav>
+      <button onclick="navigate('home')">Início</button>
+      <button onclick="navigate('favorites')">Favoritos</button>
+      <button onclick="navigate('upload')">MIDI Data TWW</button>
+      <button onclick="navigate('about')">Sobre</button>
+    </nav>
+  </header>
+
   <h1>Olá, Mundo!</h1>
-  <p>Este é um exemplo simples de uma página HTML.</p>
+  <p>Este é um site criado para o auxilio e livre uso de quem quer usar saus Dados Midis como preferir.
+  O site foi apenas foi criado por causa do jogo do roblox <a href="https://www.roblox.com/games/2317712696/The-Wild-West#!/game-instances">The Wild West.</a></p>
+
+  <script>
+    function navigate(section) {
+      // Lógica de navegação aqui, por exemplo, redirecionar para diferentes páginas
+      window.location.href = `${section}.html`;
+    }
+  </script>
 </body>
 </html>
