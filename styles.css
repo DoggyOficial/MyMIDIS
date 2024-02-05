@@ -96,8 +96,8 @@ li {
 
 #search-bar {
   margin-bottom: 10px;
-  padding: 8px;
+  padding: 5px;
   border: 3px solid #ccc;
-  border-radius: 8px;
-  width: 98.5%; /* Largura ajustada */
+  border-radius: 5px;
+  width: 90%; /* Largura ajustada */
 }
