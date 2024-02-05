@@ -34,7 +34,7 @@ nav button {
   background-color: #2196F3;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: background-color 0.5s;
   margin-bottom: 10px; /* Adiciona margem inferior para espaçamento */
 }
@@ -61,7 +61,7 @@ li {
   padding: 8px;
   cursor: pointer;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: background-color 0.5s;
 }
 
@@ -96,9 +96,9 @@ li {
 
 #search-bar {
   margin-bottom: 10px;
-  padding: 8.5px;
+  padding: 8px;
   border: 3px solid #ccc;
-  border-radius: 8.5px;
+  border-radius: 8px;
   width: 100%; /* Largura ajustada */
   box-sizing: border-box; /* Garante que a largura inclua bordas e preenchimento */
 }
