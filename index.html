@@ -23,7 +23,7 @@
       justify-content: space-between; /* Alinhamento à esquerda */
       align-items: center;
       padding: 10px;
-      margin-bottom: 4px; /* Adicionando espaçamento vertical */
+      margin-bottom: 4px; /* Espaçamento vertical reduzido */
       border: 1px solid #ccc;
       border-radius: 5px;
     }
@@ -75,8 +75,10 @@
           const listItem = document.createElement('li');
           listItem.innerHTML = `
             <span>${file.name}</span>
-            <button class="download-button" onclick="downloadMidi('${file.name}')">Baixar</button>
-            <button class="copy-button" onclick="copyMidiUrl('${file.name}', this)">Copiar</button>
+            <div>
+              <button class="download-button" onclick="downloadMidi('${file.name}')">Baixar</button>
+              <button class="copy-button" onclick="copyMidiUrl('${file.name}', this)">Copiar</button>
+            </div>
           `;
           midiList.appendChild(listItem);
         }
