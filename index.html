@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de MIDIs</title>
+</head>
+<body>
+
+  <h1>Lista de MIDIs</h1>
+
+  <ul id="midi-list">
+    <!-- Aqui serão adicionados os itens da lista dinamicamente -->
+  </ul>
+
+  <button id="copy-button">Copiar URL</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const midiList = document.getElementById('midi-list');
+      const copyButton = document.getElementById('copy-button');
+
+      // Adicione aqui os nomes dos seus arquivos MIDI
+      const midiFiles = [
+        'midi1.mid',
+        // Adicione mais arquivos conforme necessário
+      ];
+
+      // Adicione os itens da lista dinamicamente
+      midiFiles.forEach(file => {
+        const listItem = document.createElement('li');
+        listItem.textContent = file;
+        midiList.appendChild(listItem);
+      });
+
+      // Evento de clique no botão para copiar a URL
+      copyButton.addEventListener('click', function () {
+        const selectedFile = midiList.querySelector('.selected');
+        if (selectedFile) {
+          const midiUrl = `https://seu-usuario.github.io/seu-repositorio/${selectedFile.textContent}`;
+          navigator.clipboard.writeText(midiUrl).then(() => {
+            alert('URL copiada para a área de transferência!');
+          }).catch(err => {
+            console.error('Erro ao copiar URL:', err);
+          });
+        } else {
+          alert('Selecione um arquivo MIDI antes de copiar a URL.');
+        }
+      });
+
+      // Adicione um evento de clique a cada item da lista para destacar o selecionado
+      midiList.addEventListener('click', function (event) {
+        const selectedFile = midiList.querySelector('.selected');
+        if (selectedFile) {
+          selectedFile.classList.remove('selected');
+        }
+        if (event.target.tagName === 'LI') {
+          event.target.classList.add('selected');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
