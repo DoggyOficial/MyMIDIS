@@ -36,10 +36,7 @@ nav button {
   border: none;
   border-radius: 3px;
   transition: background-color 0.5s;
-}
-
-nav button:hover {
-  background-color: #1565C0;
+  margin-bottom: 10px; /* Adiciona margem inferior para espaçamento */
 }
 
 #midi-list {
@@ -55,11 +52,12 @@ li {
   padding: 10px;
   margin-bottom: 4px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 110%;
 }
 
-.download-button, .copy-button {
+.download-button,
+.copy-button {
   padding: 8px;
   cursor: pointer;
   border: none;
@@ -77,11 +75,13 @@ li {
   color: white;
 }
 
-.download-button:hover, .copy-button:hover {
+.download-button:hover,
+.copy-button:hover {
   background-color: #5F9F45;
 }
 
-.download-button:active, .copy-button:active {
+.download-button:active,
+.copy-button:active {
   background-color: #4CAF50;
 }
 
@@ -99,5 +99,6 @@ li {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 20px); /* Largura ajustada */
+  box-sizing: border-box; /* Garante que a largura inclua bordas e preenchimento */
 }
