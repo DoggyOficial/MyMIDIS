@@ -100,6 +100,6 @@ li {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: calc(100% - 5px); /* Largura ajustada */
+  width: calc(100% - 10px); /* Largura ajustada */
   box-sizing: border-box;
 }
