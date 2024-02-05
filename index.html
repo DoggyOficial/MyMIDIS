@@ -22,10 +22,27 @@
     }
     header {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-items: center;
       padding: 10px;
       background-color: #2196F3;
       color: white;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav button {
+      padding: 8px;
+      cursor: pointer;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      transition: background-color 0.5s;
+    }
+    nav button:hover {
+      background-color: #1565C0;
     }
     #midi-list {
       list-style: none;
@@ -87,10 +104,10 @@
       MyMIDIs!
     </h1>
     <nav>
-      <button onclick="navigate('Início')">Início</button>
-      <button onclick="navigate('Favoritos')">Favoritos</button>
-      <button onclick="navigate('MIDI Data')">MIDIdata</button>
-      <button onclick="navigate('Sobre')">Sobre</button>
+      <button onclick="navigate('home')">Início</button>
+      <button onclick="navigate('favorites')">Favoritos</button>
+      <button onclick="navigate('upload')">MIDI Data TWW</button>
+      <button onclick="navigate('about')">Sobre</button>
     </nav>
   </header>
 
