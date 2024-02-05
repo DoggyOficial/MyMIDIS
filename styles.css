@@ -95,9 +95,11 @@ li {
 }
 
 #search-bar {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 3px solid #ccc;
+  position: absolute;
+  bottom: 0; /* Posiciona a barra de pesquisa no final */
+  left: 0; /* Alinha a barra de pesquisa com o lado esquerdo */
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%; /* Largura ajustada */
 }
