@@ -43,6 +43,7 @@ nav button {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px; /* Ajuste de margem superior para espaçamento */
 }
 
 li {
@@ -95,11 +96,10 @@ li {
 }
 
 #search-bar {
-  position: absolute;
-  bottom: 0; /* Posiciona a barra de pesquisa no final */
-  left: 0; /* Alinha a barra de pesquisa com o lado esquerdo */
-  width: 100%;
+  margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: calc(100% - 20px); /* Largura ajustada */
+  box-sizing: border-box; /* Garante que a largura inclua bordas e preenchimento */
 }
