@@ -16,8 +16,8 @@ h1 img {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Adiciona uma coluna para os elementos ficarem abaixo uns dos outros */
+  align-items: center; /* Centraliza os elementos no eixo transversal */
   padding: 10px;
   background-color: #2196F3;
   color: white;
@@ -26,6 +26,7 @@ header {
 nav {
   display: flex;
   gap: 10px;
+  margin-top: 10px; /* Adiciona margem superior para espaçamento */
 }
 
 nav button {
@@ -36,14 +37,13 @@ nav button {
   border: none;
   border-radius: 3px;
   transition: background-color 0.5s;
-  margin-bottom: 10px; /* Adiciona margem inferior para espaçamento */
 }
 
 #midi-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 10px; /* Ajuste de margem superior para espaçamento */
+  margin-top: 10px;
 }
 
 li {
@@ -96,10 +96,10 @@ li {
 }
 
 #search-bar {
-  margin-bottom: 10px;
+  margin-top: 10px; /* Adiciona margem superior para espaçamento */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: calc(100% - 20px); /* Largura ajustada */
-  box-sizing: border-box; /* Garante que a largura inclua bordas e preenchimento */
+  box-sizing: border-box;
 }
