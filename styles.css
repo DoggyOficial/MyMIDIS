@@ -34,7 +34,7 @@ nav button {
   background-color: #2196F3;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: background-color 0.5s;
   margin-bottom: 10px; /* Adiciona margem inferior para espaçamento */
 }
@@ -51,7 +51,7 @@ li {
   align-items: center;
   padding: 10px;
   margin-bottom: 4px;
-  border: 5px solid #ccc;
+  border: 3px solid #ccc;
   border-radius: 10px;
   font-size: 110%;
 }
@@ -61,7 +61,7 @@ li {
   padding: 8px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: background-color 0.5s;
 }
 
@@ -96,8 +96,8 @@ li {
 
 #search-bar {
   margin-bottom: 10px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  padding: 8px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
   width: 100%; /* Largura ajustada */
 }
