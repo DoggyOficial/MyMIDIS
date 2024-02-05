@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title style="text-align:center; font-family: Arial;">MyMIDIS!</title>
+  <title style="text-align:center; font-family: Arial;">Lista de MIDIs</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
+      margin: 20px;
     }
     h1 {
       color: #333;
@@ -25,19 +26,29 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .download-button {
-      background-color: #4CAF50;
+    .download-button, .copy-button {
+      padding: 8px;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+      transition: background-color 0.5s;
+    }
+    .download-button:hover, .copy-button:hover {
+      background-color: #ddd;
+    }
+    .download-button:active, .copy-button:active {
+      background-color: #4CAF50; /* Verde para Baixar */
       color: white;
     }
-    .copy-button {
-      background-color: #3498db;
+    .copy-button:active {
+      background-color: #3498db; /* Azul para Copiar */
       color: white;
     }
   </style>
 </head>
 <body>
 
-  <h1>MyMIDIS!</h1>
+  <h1>Lista de MIDIs</h1>
 
   <ul id="midi-list">
     <!-- Aqui serão adicionados os itens da lista dinamicamente -->
@@ -67,9 +78,9 @@
 
       // Evento de clique no botão para copiar a URL
       window.copyMidiUrl = function (fileName) {
-        const midiUrl = `https://seu-usuario.github.io/seu-repositorio/${fileName}`;
+        const midiUrl = `https://DoggyOficial.github.io/midis/${fileName}`;
         navigator.clipboard.writeText(midiUrl).then(() => {
-          alert('URL copiada para a área de transferência!');
+          setTimeout(() => alert('Copiado!'), 1000);
         }).catch(err => {
           console.error('Erro ao copiar URL:', err);
         });
@@ -77,7 +88,7 @@
 
       // Evento de clique no botão para baixar o MIDI
       window.downloadMidi = function (fileName) {
-        const midiUrl = `https://seu-usuario.github.io/seu-repositorio/${fileName}`;
+        const midiUrl = `https://DoggyOficial.github.io/midis/${fileName}`;
         const link = document.createElement('a');
         link.href = midiUrl;
         link.download = fileName;
