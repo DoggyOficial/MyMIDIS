@@ -18,7 +18,7 @@
     </h1>
     <nav>
       <button onclick="navigate('index')">Início</button>
-      <button onclick="navigate('favorites')">Favoritos</button>
+      <button onclick="navigate('Favorites')">Favoritos</button>
       <button onclick="navigate('Upload')">MIDI Data TWW</button>
       <button onclick="navigate('About')">Sobre</button>
     </nav>
@@ -53,11 +53,20 @@
             <div class="button-container">
               <button class="download-button" onclick="downloadMidi('${file.name}')">Baixar</button>
               <button class="copy-button" onclick="copyMidiUrl('${file.name}', this)">Copiar</button>
+              <button class="favorite-button" onclick="addToFavorites('${file.name}')">Favorito</button>
             </div>
           `;
           midiList.appendChild(listItem);
         }
       });
+
+      // Função para adicionar um item aos favoritos
+      window.addToFavorites = function (fileName) {
+        // Implementar lógica para adicionar o item aos favoritos
+        console.log('Adicionado aos favoritos:', fileName);
+        // Aqui você pode adicionar a lógica para salvar o item localmente
+        // e atualizar a interface de acordo
+      };
 
       // Evento de clique no botão para copiar a URL
       window.copyMidiUrl = function (fileName, button) {
