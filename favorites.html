@@ -3,20 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+  <title>Favoritos - MyMIDIs!</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/DoggyOficial/midis/main/Icon.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Olá, Mundo!</h1>
-  <p>Este é um exemplo simples de uma página HTML.</p>
+  
+  <header>
+    <h1>
+      <img src="https://raw.githubusercontent.com/DoggyOficial/midis/main/Icon.png" alt="Icon" width="24" height="24">
+      Favoritos - MyMIDIs!
+    </h1>
+    <nav>
+      <button onclick="navigate('index')">Início</button>
+      <button onclick="navigate('Favorites')">Favoritos</button>
+      <button onclick="navigate('Upload')">MIDI Data TWW</button>
+      <button onclick="navigate('About')">Sobre</button>
+    </nav>
+  </header>
+
+  <div id="favorite-list">
+    <!-- Aqui serão exibidos os itens favoritos -->
+  </div>
+
+  <script>
+    function navigate(section) {
+      window.location.href = `${section}.html`;
+    }
+
+    document.addEventListener('DOMContentLoaded', async function () {
+      const favoriteList = document.getElementById('favorite-list');
+
+      // Aqui você pode recuperar os itens favoritos salvos localmente
+      // e exibi-los na página
+
+      // Exemplo de exibição de itens favoritos
+      const favoriteItems = ['Item 1', 'Item 2', 'Item 3']; // Exemplo de itens favoritos
+      favoriteItems.forEach(item => {
+        const listItem = document.createElement('div');
+        listItem.textContent = item;
+        favoriteList.appendChild(listItem);
+      });
+    });
+  </script>
+
 </body>
 </html>
